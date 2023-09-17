@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="external.css">
+    
+</head>
+<body>
+    <h1 class="rental">Car Rental Form</h1>
+    <div class="display">
+        
+        <h2 class="Right">Find The Right Car Now</h2>
+        <div>
+            <input type="text" class="text"placeholder="Your Name" id="input1">
+            <h1 class="textone"></h1>
+        </div>
+        <div>
+            <input type="email" class="email" placeholder="Enter Your Email..." id="input2"> 
+            <h1 class="emailone"></h1>
+        </div>
+        <div>
+            <label for="" class="finput2"></label>
+            <input type="number" class="number" placeholder="Phone Number" id="input3">
+             <h1 class="numberone"></h1>
+        </div>
+        <div>
+            <input type="text" class="SELECT" placeholder="Brand Name" id="input4">
+            <h1 class="selectone"></h1>
+        </div>
+        <div>
+            <p class="p">Select Your Price</p>
+            <input type="radio" class="color"><span class="span">Below$40000</span>
+            <input type="radio" class="red"><span class="blue">Below$40000</span> <br>
+            <input type="radio" class="radio"><span class="span">Below$40000</span>
+            <input type="radio" class="white"><span class="span">Below$40000</span> <br>
+            <h1 class="five"></h1>
+        </div>
+        <button class="button">Send</button>
+    </div>
+
+    <script>
+        let firstinput = document.getElementById("input1")
+        let secondinput = document.getElementById("input2")
+        let threeinput = document.getElementById("input3")
+        let fourinput = document.getElementById("input4")
+        let check1 = document.querySelector(".textone");
+        let check2 = document.querySelector(".emailone");
+        let check3 = document.querySelector(".numberone");
+        let check4 = document.querySelector(".selectone");
+        let button = document.querySelector(".button");
+
+
+
+        button.addEventListener("cilck",cilckfunction);
+
+
+
+        firstinput.addEventListener("change",YourName);
+        function YourName(){
+            if( firstinput.value == "" || firstinput.value == undefined || firstinput.value  == null){
+                check1.innerHTML = "please enter your name" ;
+                return false;
+            } else {
+                check1.innerHTML = "";
+            }
+        }
+        secondinput.addEventListener("change",EnterYourEmail);
+        function EnterYourEmail(){
+            if( secondinput.value == "" || secondinput.value == undefined || secondinput.value  == null ){
+                check2.innerHTML = "please enter your email" ;
+                return false;
+            } else {
+                check2.innerHTML = "";
+            }
+        }
+        threeinput.addEventListener("change",PhoneNumber);
+        function PhoneNumber(){
+            if( threeinput.value == "" || threeinput.value == undefined || threeinput.value  == null ){
+                check3.innerHTML = "please enter your number " ;
+                return false;
+            } else {
+                check3.innerHTML = "";
+            }
+        }
+        fourinput.addEventListener("change",BrandName);
+        function BrandName(){
+            if( fourinput.value == "" || fourinput.value == undefined || fourinput.value  == null ){
+                check4.innerHTML = "please enter your brand name" ;
+                return false;
+            } else {
+                check4.innerHTML = "";
+            }
+        }
+        
+      
+        button.addEventListener("click",cilckfunction);
+
+
+       function cilckfunction(event){
+          event.preventDefault();
+
+
+            if( firstinput.value == "" || firstinput.value == undefined || firstinput.value  == null){
+                check1.innerHTML = "please enter your name" ;
+
+                return false;
+            }  
+             else if( secondinput.value == "" || secondinput.value == undefined || secondinput.value  == null ){
+                check2.innerHTML = "please enter your email" ;
+
+                return false;
+            } 
+            else if( threeinput.value == "" || threeinput.value == undefined || threeinput.value  == null){
+                check3.innerHTML = "please enter your number" ;
+
+                return false;
+            }
+            else if( fourinput.value == "" || fourinput.value == undefined || fourinput.value  == null ){
+                check4.innerHTML = "please enter your brand name" ;
+
+                return false;
+            }
+
+
+            else{
+                 check1.innerHTML = "";
+                 check2.innerHTML = "";
+                 check3.innerHTML = "";
+                 check4.innerHTML = "";
+            }
+       }
+
+       
+       
+       
+       
+
+       
+
+
+
+
+
+
+
+    </script>
+</body>
+
+
+
+
+    
+
+</html>
